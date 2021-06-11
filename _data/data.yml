@@ -8,15 +8,15 @@ sidebar:
   avatar: profile.png #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
-  email: zoaby.am@gmail.com
+  email: me@ahmadmostafa.com
   phone: "962 7777 17 358"
   website: ahmadmostafa.com
   linkedin: z3by
   github: z3by
   telegram: # add your nickname without '@' sign
-  gitlab: z3by
+  gitlab: 
   stack-overflow: 13585313/ahmad-mostafa
-  codewars: z3by
+  codewars: 
 
   languages:
     - idiom: Arabic
@@ -27,7 +27,7 @@ sidebar:
 
 
   interests:
-    - item: History
+    - item: Photography
       link:
 
     - item: Design
@@ -39,38 +39,46 @@ sidebar:
 career-profile:
   title: Career Profile
   summary: |
-    I'm a passionate, persistent, self-directed, autonomous learner Full Stack Software Engineer. I Enjoy building cool 😎 scalable ⏫ well designed 📐 fast 🚀 web and mobile apps using the cutting-edge languages and frameworks, I work with LOVE 🥰 and live by challenges.
+    I'm a passionate, persistent, autonomous learner, lifelong learner, go-getter full-stack software engineer.
+    I am constantly looking for new ways to challenge myself, learn new things, and grow my skill set.
+    I enjoy solving users' everyday problems by building full-stack cloud-based solutions using Python, Django, Modern JavaScript, Vue.js/React.js, AWS, Golang, Node.js, SQL/NoSQL databases, and more, I empathize with end-users and enjoy automating the boring stuff to save time and resources.
+    I worked on different kinds of projects, greenfield projects as well as legacy projects where I helped replacing existing system functionality with modern and flexible modular components and demonstrated great problem-solving skills, and achieve high-quality results by being a highly effective team player and by following the best software engineering practices and disciplines like Agile, TDD, OOP and Functional programming, Automation, CI/CD.
 education:
   - degree: Software Engineering
     university: RBK RebootKamp coding bootcamp
     time: 2018 - 2018
     details: |
-      A 4 months coding boot camp
+      4 months coding boot camp
 experiences:
   - role: Software Engineer
     time: 2018 - 2019
     company: 359Jo solutions.
     details: |
-      
+      Project-based employment where I worked on a web solution for an NGO that connects investors with refugee ventures around the world to create a sustainable environment for refugees.
   - role: Software Engineer
     time: 2019 - present
     company: BriteCore
     details: |
-      
+      Responsibilities:
+      - Replace existing system functionality with modern and flexible modular components
+      - Develop new functionality using Python, Django, Flask, and VueJS
+      - Work with product owners to develop solutions that meet client needs
+      - Work with Architects to develop solutions that iterate on existing software and architecture
+      - Collaborate with engineers and work together as a team
+
+    Achievements:
+    - Helped to build new microservices and integrations to extend the new platform and maintain the current vendor integrations.
+    - Helped building many internal tools to make improve the developer experience and enhance the operations with the power of automation.
 skills:
   title: Skills &amp; Proficiency
 
   toolset:
     - name: Python & Django
-      level: 98%
 
     - name: Javascript
-      level: 98%
 
     - name: Vue.js
-      level: 98%
 
     - name: React.js
-      level: 85%
 footer: >
   Ahmad Mostafa
