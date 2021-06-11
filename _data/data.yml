@@ -68,6 +68,20 @@ experiences:
     company: 359Jo solutions.
     details: |
       Project-based employment where I worked on a web solution for an NGO that connects investors with refugee ventures around the world to create a sustainable environment for refugees.
+projects:
+    title: Projects
+    assignments:
+      - title: vuepress-theme-modern-blog
+        link: "https://github.com/z3by/vuepress-theme-modern-blog"
+        tagline: "Modern blog theme for VuePress."
+      - title: vuepress-plugin-flexsearch
+        link: "https://github.com/z3by/vuepress-theme-modern-blog"
+        tagline: "Next-Generation full text search library for Vuepress"
+      - title: vuepress-theme-modern-blog
+        link: "https://github.com/z3by/vuepress-theme-modern-blog"
+        tagline: "Modern blog theme for VuePress."
+      
+
 skills:
   title: Skills &amp; Proficiency
 
