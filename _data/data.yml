@@ -53,14 +53,14 @@ experiences:
     time: 2019 - present
     company: BriteCore
     details: |
-      ### Responsibilities:
+      **Responsibilities:**
       - Replace existing system functionality with modern and flexible modular components
       - Develop new functionality using Python, Django, Flask, and VueJS
       - Work with product owners to develop solutions that meet client needs
       - Work with Architects to develop solutions that iterate on existing software and architecture
       - Collaborate with engineers and work together as a team
 
-      ### Achievements:
+      **Achievements:**
       - Helped to build new microservices and integrations to extend the new platform and maintain the current vendor integrations.
       - Helped building many internal tools to make improve the developer experience and enhance the operations with the power of automation.
   - role: Software Engineer
