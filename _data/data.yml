@@ -38,10 +38,14 @@ sidebar:
 career-profile:
   title: Career Profile
   summary: |
-    I'm a passionate, persistent, autonomous learner, lifelong learner, go-getter full-stack software engineer.
-    I am constantly looking for new ways to challenge myself, learn new things, and grow my skill set.
-    I enjoy solving users' everyday problems by building full-stack cloud-based solutions using Python, Django, Modern JavaScript, Vue.js/React.js, AWS, Golang, Node.js, SQL/NoSQL databases, and more, I empathize with end-users and enjoy automating the boring stuff to save time and resources.
-    I worked on different kinds of projects, greenfield projects as well as legacy projects where I helped replacing existing system functionality with modern and flexible modular components and demonstrated great problem-solving skills, and achieve high-quality results by being a highly effective team player and by following the best software engineering practices and disciplines like Agile, TDD, OOP and Functional programming, Automation, CI/CD.
+    I'm a Full-Stack software engineer who enjoys solving users' daily problems by building cloud-based solutions using the cutting-edge technologies,
+    I empathize with end-users and enjoy automating the boring stuff to save time and resources.
+    I worked on different projects, including greenfield projects as well as legacy projects where I helped replacing
+    existing system functionality with modern and flexible modular
+    components, and demonstrated great problem-solving skills,
+    and achieve high-quality results by being a highly effective team player and by
+    following the best software engineering practices and disciplines
+    like Agile, TDD, OOP and Functional programming, Automation, CI/CD.
 education:
   - degree: Software Engineering
     university: RBK RebootKamp coding bootcamp
@@ -57,12 +61,7 @@ experiences:
       - Replace existing system functionality with modern and flexible modular components
       - Develop new functionality using Python, Django, Flask, and VueJS
       - Work with product owners to develop solutions that meet client needs
-      - Work with Architects to develop solutions that iterate on existing software and architecture
       - Collaborate with engineers and work together as a team
-
-      **Achievements:**
-      - Helped to build new microservices and integrations to extend the new platform and maintain the current vendor integrations.
-      - Helped building many internal tools to make improve the developer experience and enhance the operations with the power of automation.
   - role: Software Engineer
     time: 2018 - 2019
     company: 359Jo solutions.
@@ -71,16 +70,12 @@ experiences:
 projects:
     title: Projects
     assignments:
-      - title: vuepress-theme-modern-blog
+      - title: Vuepress theme modern-blog
         link: "https://github.com/z3by/vuepress-theme-modern-blog"
         tagline: "Modern blog theme for VuePress."
-      - title: vuepress-plugin-flexsearch
+      - title: Vuepress plugin flexsearch
         link: "https://github.com/z3by/vuepress-theme-modern-blog"
-        tagline: "Next-Generation full text search library for Vuepress"
-      - title: vuepress-theme-modern-blog
-        link: "https://github.com/z3by/vuepress-theme-modern-blog"
-        tagline: "Modern blog theme for VuePress."
-      
+        tagline: "Next-Generation full text search library for Vuepress"      
 
 skills:
   title: Skills &amp; Proficiency
@@ -93,5 +88,4 @@ skills:
     - name: AWS
     - name: React.js
 
-footer: >
-  Ahmad Mostafa
+footer: 
