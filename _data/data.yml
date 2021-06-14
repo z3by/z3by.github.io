@@ -72,8 +72,8 @@ skills:
   title: Skills &amp; Proficiency
 
   toolset:
-    - name: Python
-    - name: Python frameworks: Django, Flask, Starlette.
+    - name: Python.
+    - name: Python web frameworks: Django, Flask, Starlette.
     - name: Full-Stack Javascript: Node.js, Webpack, npm, ES6, babel.
     - name: Javascript Frameworks: Vue.js, React.js, Angular.
     - name: Cloud Technologies: Amazon Web Services.
