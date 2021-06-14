@@ -73,10 +73,9 @@ skills:
 
   toolset:
     - name: Python
-    - name: Django
-    - name: Javascript
-    - name: Vue.js
-    - name: AWS
-    - name: React.js
+    - name: Python frameworks: Django, Flask, Starlette.
+    - name: Full-Stack Javascript: Node.js, Webpack, npm, ES6, babel.
+    - name: Javascript Frameworks: Vue.js, React.js, Angular.
+    - name: Cloud Technologies: Amazon Web Services.
 
 footer: 
