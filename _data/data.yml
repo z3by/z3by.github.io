@@ -38,14 +38,12 @@ sidebar:
 career-profile:
   title: Career Profile
   summary: |
-    I'm a Full-Stack software engineer who enjoys solving users' daily problems by building cloud-based solutions using the cutting-edge technologies,
-    I empathize with end-users and enjoy automating the boring stuff to save time and resources.
-    I worked on different projects, including greenfield projects as well as legacy projects where I helped replacing
-    existing system functionality with modern and flexible modular
-    components, and demonstrated great problem-solving skills,
-    and achieve high-quality results by being a highly effective team player and by
-    following the best software engineering practices and disciplines
-    like Agile, TDD, OOP and Functional programming, Automation, CI/CD.
+    Full-Stack Software Engineer with extensive experience building scalable cloud-based solutions using cutting-edge technologies.
+    I'm passionate about solving real-world problems and creating meaningful user experiences through clean, maintainable code.
+    My expertise spans both greenfield development and modernizing legacy systems by replacing outdated functionality with 
+    flexible, modular components. I thrive in collaborative environments, consistently delivering high-quality results through 
+    best practices including Agile methodologies, Test-Driven Development (TDD), Object-Oriented and Functional programming, 
+    automation, and CI/CD pipelines.
 education:
   - degree: Software Engineering
     university: RBK RebootKamp coding bootcamp
@@ -53,29 +51,39 @@ education:
     details: |
       4 months coding boot camp
 experiences:
+  - role: Backend Developer
+    time: 2022 - present
+    company: Kraken Technologies
+    details: |
+      **Responsibilities:**
+      - Design and develop scalable backend services and APIs
+      - Build and maintain robust Python-based microservices architecture
+      - Collaborate with cross-functional teams to deliver high-quality software solutions
+      - Implement best practices for code quality, testing, and deployment automation
   - role: Software Engineer
-    time: 2019 - present
+    time: 2019 - 2022
     company: BriteCore
     details: |
       **Responsibilities:**
-      - Replace existing system functionality with modern and flexible modular components
-      - Develop new functionality using Python, Django, Flask, and VueJS
-      - Work with product owners to develop solutions that meet client needs
-      - Collaborate with engineers and work together as a team
+      - Replaced existing system functionality with modern and flexible modular components
+      - Developed new features using Python, Django, Flask, and VueJS
+      - Worked with product owners to develop solutions that meet client needs
+      - Collaborated with engineering teams to deliver robust software solutions
   - role: Software Engineer
     time: 2018 - 2019
-    company: 359Jo solutions.
+    company: 359Jo solutions
     details: |
-      Project-based employment where I worked on a web solution for an NGO that connects investors with refugee ventures around the world to create a sustainable environment for refugees.
+      Project-based employment developing a web solution for an NGO that connects investors with refugee ventures 
+      around the world to create sustainable environments for refugees.
 
 skills:
   title: Skills &amp; Proficiency
 
   toolset:
-    - name: "Python."
-    - name: "Python web frameworks: Django, Flask, Starlette."
-    - name: "Full-Stack Javascript: Node.js, Webpack, npm, ES6, babel."
-    - name: "Javascript Frameworks: Vue.js, React.js, Angular."
-    - name: "Cloud Technologies: Amazon Web Services."
+    - name: "Python"
+    - name: "Python web frameworks: Django, Flask, Starlette"
+    - name: "Full-Stack JavaScript: Node.js, Webpack, npm, ES6, Babel"
+    - name: "JavaScript Frameworks: Vue.js, React.js, Angular"
+    - name: "Cloud Technologies: Amazon Web Services"
 
 footer: 
