@@ -1,7 +1,7 @@
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
 
-    body{
+    body {
         padding: 0;
     }
 
@@ -16,7 +16,7 @@
 
     .main-wrapper .time {
         position: static;
-        display: block;
+        display: inline-block;
         margin-top: 5px;
     }
 
@@ -24,13 +24,24 @@
         margin-bottom: 0;
     }
 
+    .main-wrapper .experiences-section .item,
+    .main-wrapper .educations-section .item {
+        padding-left: 16px;
+    }
+
+    .skill-tags {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
 
 }
+
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-
-}
+@media (min-width: 768px) {}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -44,12 +55,8 @@
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
 
 /* Ex-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1400px) {
-
-}
+@media (min-width: 1400px) {}

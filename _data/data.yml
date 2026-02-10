@@ -1,22 +1,22 @@
 sidebar:
-  about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
-  education: True # set to False if you want education in main section instead of in sidebar
+  about: True
+  education: True
 
   # Profile information
   name: Ahmad Mostafa
-  tagline: Full Stack Software Engineer
-  avatar: profile.png #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+  tagline: Backend Engineer | DDD & Microservices
+  avatar: profile.png
 
   # Sidebar links
   email: zoaby.am@gmail.com
   phone: "962 7777 17 358"
-  website: ahmadmostafa.com
+  website: z3by.com
   linkedin: z3by
   github: z3by
-  telegram: # add your nickname without '@' sign
-  gitlab: 
-  stack-overflow: 13585313/ahmad-mostafa
-  codewars: 
+  telegram:
+  gitlab:
+  stack-overflow:
+  codewars:
 
   languages:
     - idiom: English
@@ -24,66 +24,100 @@ sidebar:
     - idiom: Arabic
       level: Native
 
-
   interests:
+    - item: AI & System Architecture
+      link: https://z3by.com
+
+    - item: Writing
+      link: https://z3by.com
+
     - item: Photography
       link:
 
-    - item: Design
-      link:
-
-    - item: Arabic literature
+    - item: Arabic Literature
       link:
 
 career-profile:
   title: Career Profile
   summary: |
-    Full-Stack Software Engineer with extensive experience building scalable cloud-based solutions using cutting-edge technologies.
-    I'm passionate about solving real-world problems and creating meaningful user experiences through clean, maintainable code.
-    My expertise spans both greenfield development and modernizing legacy systems by replacing outdated functionality with 
-    flexible, modular components. I thrive in collaborative environments, consistently delivering high-quality results through 
-    best practices including Agile methodologies, Test-Driven Development (TDD), Object-Oriented and Functional programming, 
-    automation, and CI/CD pipelines.
+    Backend Engineer with 7+ years of experience designing and building scalable distributed systems
+    for high-impact products. Currently at **Kraken Technologies**, architecting Python-based services
+    that power smart energy platforms serving **15 million+ users globally**. Deep expertise in
+    **Domain-Driven Design (DDD)**, **microservices**, **event-driven architecture**, and **CQRS**.
+    Proven track record of modernizing legacy systems into flexible, modular architectures—combining
+    engineering excellence with real-world business outcomes. Leverages **AI and LLM-powered tools**
+    daily to accelerate development, improve code quality, and deliver higher-impact solutions.
+
 education:
   - degree: Software Engineering
-    university: RBK RebootKamp coding bootcamp
-    time: 2018 - 2018
+    university: RBK RebootKamp Coding Bootcamp
+    time: 2018
     details: |
-      4 months coding boot camp
+      Intensive 4-month full-stack software engineering program focused on modern web technologies,
+      algorithms & data structures, computer science fundamentals, and collaborative software
+      development practices using Agile methodologies.
+
 experiences:
   - role: Backend Developer
-    time: 2022 - present
+    time: 2022 - Present
     company: Kraken Technologies
     details: |
-      **Responsibilities:**
-      - Design and develop scalable backend services and APIs using Python
-      - Build and maintain robust Python-based architecture
-      - Collaborate with cross-functional teams to deliver high-quality software solutions
-      - Implement best practices for code quality, testing, and deployment automation
+      Building the backend platform behind one of the world's leading energy technology companies,
+      serving **15 million+ customers globally** across multiple markets.
+
+      - Designed and developed scalable backend services and APIs using **Python**, powering smart
+        energy management, customer platforms, and grid optimization systems
+      - Architected robust, event-driven microservices following **DDD** and **CQRS** patterns,
+        enabling reliable processing at scale
+      - Drove engineering excellence through comprehensive test coverage, code reviews, and
+        deployment automation via **CI/CD pipelines**
+      - Leveraged **AI-powered tools and LLMs** to accelerate development workflows, improve
+        code quality, and enhance productivity across the team
+      - Collaborated with cross-functional teams across time zones to ship features that support
+        Kraken's mission of accelerating the transition to sustainable energy
+
   - role: Software Engineer
     time: 2019 - 2022
     company: BriteCore
     details: |
-      **Responsibilities:**
-      - Contributed to the modernization of legacy system architecture, replacing outdated functionality with flexible, modular components
-      - Developed new features using Python, Django, Flask, and VueJS, significantly improving system maintainability and extensibility
-      - Worked closely with product owners to translate complex requirements into robust technical solutions
-      - Collaborated with engineering teams to deliver robust software solutions
+      Full-stack engineer on a cloud-based **insurance SaaS platform** serving carriers across
+      North America and beyond.
+
+      - Contributed to the modernization of legacy system architecture, replacing monolithic functionality with
+        flexible, modular **microservices**—improving maintainability and deployment velocity
+      - Engineered responsive web applications and internal tools using **Vue.js**, **Django**,
+        and **Flask**, significantly enhancing developer experience and operational efficiency
+      - Developed and maintained vendor integrations, extending platform capabilities for
+        insurance-specific workflows (policy management, claims, billing)
+      - Partnered with product owners and solution architects to translate complex domain
+        requirements into robust, well-tested technical solutions
+
   - role: Software Engineer
     time: 2018 - 2019
     company: 359Jo Solutions
     details: |
-      Project-based employment developing a web solution for an NGO that connects investors with refugee ventures 
-      around the world to create sustainable environments for refugees.
+      Built a full-stack web platform for an international NGO connecting investors with
+      refugee entrepreneurs worldwide.
+
+      - Developed secure **RESTful APIs** and responsive interfaces for a cross-border investment
+        matching platform, directly supporting sustainable economic opportunities for refugee communities
+      - Implemented user authentication, data validation, and real-time dashboards using
+        **Node.js**, **React**, and modern JavaScript tooling
+
+
 
 skills:
   title: Skills &amp; Proficiency
 
   toolset:
-    - name: "Python"
-    - name: "Python web frameworks: Django, Flask, Starlette"
-    - name: "Full-Stack JavaScript: Node.js, Webpack, npm, ES6, Babel"
-    - name: "JavaScript Frameworks: Vue.js, React.js, Angular"
-    - name: "Cloud Technologies: Amazon Web Services"
+    - name: "Python (Django, Flask, Starlette, FastAPI)"
+    - name: "Domain-Driven Design (DDD) & CQRS"
+    - name: "Microservices & Event-Driven Architecture"
+    - name: "REST API Design & GraphQL"
+    - name: "JavaScript / TypeScript (Vue.js, React, Node.js)"
+    - name: "AWS, Docker, CI/CD Pipelines"
+    - name: "PostgreSQL, Redis, NoSQL Databases"
+    - name: "AI-Augmented Development (LLMs, Copilot, AI-Assisted Code Review)"
+    - name: "Test-Driven Development (TDD) & Agile"
 
-footer: 
+footer:

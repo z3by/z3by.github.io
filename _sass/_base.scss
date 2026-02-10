@@ -1,9 +1,35 @@
 /* ======= Base ======= */
+
+// Fade-in animation
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subtleGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba($primary-color, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba($primary-color, 0.5);
+    }
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: $text-color-secondary;
     background: $smoky-white;
-    font-size: 15px; // Slightly larger for readability
+    font-size: 15px;
     padding: 30px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -15,8 +41,9 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 700;
-    color: $text-color; // Ensure headers use primary text color
+    color: $text-color;
 }
 
 a {
@@ -34,31 +61,36 @@ a {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+/* ======= Wrapper ======= */
 .wrapper {
     background: $wrapper-bg;
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
-    border-radius: 8px; // Soften corners
-    overflow: hidden; // Clip content to border radius
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); // Deeper shadow for dark mode
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba($primary-color, 0.05);
 }
 
+/* ======= Sidebar ======= */
 .sidebar-wrapper {
-    background: $sidebar-bg;
+    background: $sidebar-gradient;
     position: absolute;
     right: 0;
     width: 280px;
     height: 100%;
     min-height: 800px;
     color: $text-color;
-    border-left: 1px solid $divider; // Subtle separator
+    border-left: 1px solid rgba($primary-color, 0.1);
 
     a {
         color: $text-color;
+        transition: all 0.3s ease;
 
         &:hover {
             color: $primary-color;
@@ -66,25 +98,31 @@ p {
     }
 
     .profile-container {
-        padding: 30px;
-        background: rgba(0, 0, 0, 0.2);
+        padding: 40px 30px 30px;
+        background: linear-gradient(180deg, rgba($primary-color, 0.08) 0%, transparent 100%);
         text-align: center;
         color: $text-color;
     }
 
     .name {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 900;
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+        background: $accent-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .tagline {
         color: $text-color-secondary;
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 13px;
+        font-weight: 500;
         margin-top: 0;
         margin-bottom: 0;
+        letter-spacing: 0.3px;
     }
 
     .profile {
@@ -92,25 +130,44 @@ p {
     }
 
     .avatar {
-        max-width: 100px;
-        margin-bottom: 15px;
-        border: 2px solid $primary-color; // Accent border
+        max-width: 120px;
+        margin-bottom: 18px;
+        border: 3px solid transparent;
+        background-image: $accent-gradient;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
         border-radius: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 20px rgba($primary-color, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 30px rgba($primary-color, 0.5);
+        }
     }
 
     .contact-list {
 
         .fas,
         .fab {
-            margin-right: 5px;
-            font-size: 18px;
+            margin-right: 8px;
+            font-size: 16px;
             vertical-align: middle;
-            color: $primary-color; // Accent icons
+            color: $primary-color;
+            width: 20px;
+            text-align: center;
         }
 
         li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            padding: 6px 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+
+            &:hover {
+                background: rgba($primary-color, 0.08);
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -119,18 +176,31 @@ p {
     }
 
     .container-block {
-        padding: 30px;
+        padding: 25px 30px;
     }
 
     .container-block-title {
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 15px;
-        color: $text-color;
-        border-bottom: 1px solid $divider;
+        color: $primary-color;
+        letter-spacing: 1.5px;
+        border-bottom: none;
         padding-bottom: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: $accent-gradient;
+            border-radius: 2px;
+        }
     }
 
     .degree {
@@ -154,18 +224,20 @@ p {
             font-weight: 500;
             margin-bottom: 0px;
             margin-top: 0;
+            font-size: 13px;
         }
 
         .time {
             color: $text-grey;
             font-weight: 500;
             margin-bottom: 0px;
+            font-size: 12px;
         }
     }
 
     .languages-container {
         .lang-desc {
-            color: $text-color-secondary;
+            color: $text-grey;
         }
     }
 
@@ -194,6 +266,40 @@ p {
     }
 }
 
+/* ======= Download Bar ======= */
+.download-bar {
+    max-width: 1000px;
+    margin: 0 auto 12px;
+    text-align: right;
+}
+
+.btn-download-pdf {
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-color;
+    background: rgba($primary-color, 0.1);
+    border: 1px solid rgba($primary-color, 0.3);
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+
+    .fas {
+        margin-right: 6px;
+    }
+
+    &:hover {
+        background: $accent-gradient;
+        color: #0f172a;
+        border-color: transparent;
+        box-shadow: 0 4px 20px rgba($primary-color, 0.4);
+        transform: translateY(-2px);
+    }
+}
+
+/* ======= Main Content ======= */
 .main-wrapper {
     background: $wrapper-bg;
     padding: 60px;
@@ -201,31 +307,61 @@ p {
 
     .section-title {
         text-transform: uppercase;
-        font-size: 20px;
-        font-weight: 600;
-        color: $primary-color;
+        font-size: 18px;
+        font-weight: 700;
+        color: $text-color;
         position: relative;
         margin-top: 0;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        padding-bottom: 12px;
 
         .fa-stack {
-            font-size: 1rem; // Adjust icon size
-            margin-right: 8px;
+            font-size: 0.9rem;
+            margin-right: 10px;
         }
 
         .fa-circle {
-            color: rgba($primary-color, 0.2); // Soft background for icon
+            color: rgba($primary-color, 0.15);
         }
 
         .fa-inverse {
             color: $primary-color;
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: $accent-gradient;
+            border-radius: 3px;
+        }
     }
 
     .section {
-        margin-bottom: 60px;
-        border-bottom: 1px solid rgba($divider, 0.3); // Subtle separator between sections
+        margin-bottom: 50px;
         padding-bottom: 40px;
+        border-bottom: 1px solid rgba($divider, 0.3);
+        animation: fadeInUp 0.6s ease both;
+
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         &:last-child {
             border-bottom: none;
@@ -233,10 +369,55 @@ p {
         }
     }
 
+    // Career Profile summary card
+    .summary-section {
+        .summary {
+            background: rgba($primary-color, 0.04);
+            border: 1px solid rgba($primary-color, 0.1);
+            border-radius: 10px;
+            padding: 24px;
+            line-height: 1.8;
+            color: $text-color-secondary;
+
+            p {
+                margin-bottom: 0;
+
+                strong {
+                    color: $text-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
     .experiences-section,
     .educations-section {
         .item {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            padding-left: 20px;
+            border-left: 2px solid rgba($primary-color, 0.2);
+            transition: border-color 0.3s ease;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -5px;
+                top: 8px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $primary-color;
+                box-shadow: 0 0 8px rgba($primary-color, 0.4);
+            }
+
+            &:hover {
+                border-left-color: $primary-color;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -249,7 +430,7 @@ p {
     .job-title,
     .degree {
         color: $text-color;
-        font-size: 18px;
+        font-size: 17px;
         margin-top: 0;
         margin-bottom: 0;
         font-weight: 600;
@@ -260,14 +441,43 @@ p {
         right: 0;
         top: 0;
         color: $primary-color;
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 13px;
+        background: rgba($primary-color, 0.1);
+        padding: 3px 12px;
+        border-radius: 15px;
+        letter-spacing: 0.3px;
     }
 
     .company,
     .university {
-        margin-bottom: 10px;
-        color: $text-color-secondary;
+        margin-bottom: 12px;
+        color: $text-grey;
         font-weight: 500;
+        font-size: 14px;
+    }
+
+    .details {
+        color: $text-color-secondary;
+
+        ul {
+            padding-left: 18px;
+
+            li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+                position: relative;
+
+                &::marker {
+                    color: rgba($primary-color, 0.5);
+                }
+            }
+        }
+
+        strong {
+            color: $text-color;
+            font-weight: 600;
+        }
     }
 
     .project-title {
@@ -313,6 +523,7 @@ p {
 }
 
 
+/* ======= Skills ======= */
 .skillset {
     .item {
         margin-bottom: 15px;
@@ -328,7 +539,7 @@ p {
 
     .level-bar {
         height: 10px;
-        background: $darker-grey; // Dark track
+        background: $darker-grey;
         border-radius: 5px;
     }
 
@@ -339,9 +550,44 @@ p {
     }
 }
 
+// Skill tags (new pill-style layout)
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $text-color;
+    background: rgba($primary-color, 0.06);
+    border: 1px solid rgba($primary-color, 0.15);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+
+    &:hover {
+        background: rgba($primary-color, 0.12);
+        border-color: rgba($primary-color, 0.35);
+        box-shadow: 0 2px 12px rgba($primary-color, 0.15);
+        transform: translateY(-1px);
+    }
+
+    .fa,
+    .fas,
+    .fab {
+        margin-right: 8px;
+        color: $primary-color;
+        font-size: 14px;
+    }
+}
 
 
-
+/* ======= Footer ======= */
 .footer {
     padding-top: 30px;
 
@@ -354,5 +600,4 @@ p {
     .fa-heart {
         color: $heart;
     }
-
 }
