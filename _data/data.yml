@@ -42,7 +42,7 @@ career-profile:
   summary: |
     Backend Engineer with 7+ years of experience designing and building scalable distributed systems
     for high-impact products. Currently at **Kraken Technologies**, architecting Python-based services
-    that power smart energy platforms serving **15 million+ users globally**. Deep expertise in
+    that power smart energy platforms serving **70 million+ users globally**. Deep expertise in
     **Domain-Driven Design (DDD)**, **microservices**, **event-driven architecture**, and **CQRS**.
     Proven track record of modernizing legacy systems into flexible, modular architectures—combining
     engineering excellence with real-world business outcomes. Leverages **AI and LLM-powered tools**
@@ -63,7 +63,7 @@ experiences:
     company: Kraken Technologies
     details: |
       Building the backend platform behind one of the world's leading energy technology companies,
-      serving **15 million+ customers globally** across multiple markets.
+      serving **70 million+ customers globally** across multiple markets.
 
       - Designed and developed scalable backend services and APIs using **Python**, powering smart
         energy management, customer platforms, and grid optimization systems
