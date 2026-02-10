@@ -10,7 +10,9 @@
 
 <body>
   <div class="download-bar">
-    <a href="javascript:window.print()" class="btn btn-download-pdf">
+    <a href="javascript:void(0)"
+      onclick="alert('Tip: In the print dialog, make sure to enable \'Background graphics\' (under \'More settings\' in Chrome) so the dark theme colors appear in your PDF.'); window.print();"
+      class="btn btn-download-pdf">
       <i class="fas fa-download"></i> Download PDF
     </a>
   </div>

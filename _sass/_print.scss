@@ -1,45 +1,259 @@
+/* ======= Print Styles — Preserve Obsidian Dark Theme ======= */
 @media print {
    @page {
       size: A4;
+      margin: 10mm;
    }
 
+   /* ---- Global: Force background colors & images to print ---- */
+   *,
+   *::before,
+   *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+   }
+
+   /* ---- Disable animations & transitions ---- */
+   *,
+   *::before,
+   *::after {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+   }
+
+   /* ---- Body ---- */
    body {
-      font-size: 12pt;
+      background: $smoky-white !important;
+      color: $text-color-secondary !important;
+      font-size: 11pt;
+      padding: 0 !important;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
    }
 
-   img.avatar {
-      filter: grayscale(1);
-      -webkit-filter: greyscale(1);
+   /* ---- Wrapper ---- */
+   .wrapper {
+      max-width: 100% !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      background: $wrapper-bg !important;
+      overflow: visible !important;
+   }
+
+   /* ---- Sidebar ---- */
+   .sidebar-wrapper {
+      position: static !important;
+      float: right;
+      width: 35%;
+      min-height: auto !important;
+      background: $sidebar-gradient !important;
+      border-left: 1px solid rgba($primary-color, 0.1) !important;
+      color: $text-color !important;
+      page-break-inside: avoid;
+
+      a {
+         color: $text-color !important;
+      }
+
+      .profile-container {
+         background: linear-gradient(180deg, rgba($primary-color, 0.08) 0%, transparent 100%) !important;
+      }
+
+      .name {
+         background: $accent-gradient !important;
+         -webkit-background-clip: text !important;
+         -webkit-text-fill-color: transparent !important;
+         background-clip: text !important;
+      }
+
+      .tagline {
+         color: $text-color-secondary !important;
+      }
+
+      .avatar {
+         border: 3px solid transparent !important;
+         background-image: $accent-gradient !important;
+         background-origin: border-box !important;
+         background-clip: padding-box, border-box !important;
+         box-shadow: none !important;
+      }
+
+      .contact-list {
+
+         .fas,
+         .fab {
+            color: $primary-color !important;
+         }
+      }
+
+      .container-block-title {
+         color: $primary-color !important;
+
+         &::after {
+            background: $accent-gradient !important;
+         }
+      }
+
+      .degree {
+         color: $text-color !important;
+      }
+
+      .education-container {
+         .meta {
+            color: $text-color-secondary !important;
+         }
+
+         .time {
+            color: $text-grey !important;
+         }
+      }
+
+      .languages-container .lang-desc {
+         color: $text-grey !important;
+      }
+   }
+
+   /* ---- Main Content ---- */
+   .main-wrapper {
+      background: $wrapper-bg !important;
+      padding-right: calc(35% + 60px) !important;
+
+      .section-title {
+         color: $text-color !important;
+
+         .fa-circle {
+            color: rgba($primary-color, 0.15) !important;
+         }
+
+         .fa-inverse {
+            color: $primary-color !important;
+         }
+
+         &::after {
+            background: $accent-gradient !important;
+         }
+      }
+
+      .section {
+         border-bottom-color: rgba($divider, 0.3) !important;
+         page-break-inside: avoid;
+      }
+   }
+
+   /* Career Summary */
+   .summary-section .summary {
+      background: rgba($primary-color, 0.04) !important;
+      border: 1px solid rgba($primary-color, 0.1) !important;
+      color: $text-color-secondary !important;
+
+      strong {
+         color: $text-color !important;
+      }
+   }
+
+   /* Experience & Education Timeline */
+   .main-wrapper .experiences-section .item,
+   .main-wrapper .educations-section .item {
+      border-left: 2px solid rgba($primary-color, 0.2) !important;
+      page-break-inside: avoid;
+
+      &::before {
+         background: $primary-color !important;
+         box-shadow: none !important;
+      }
+   }
+
+   .main-wrapper .job-title,
+   .main-wrapper .degree {
+      color: $text-color !important;
    }
 
    .main-wrapper .time {
+      color: $primary-color !important;
+      background: rgba($primary-color, 0.1) !important;
+      position: static !important;
       float: right;
-      color: black !important;
-      -webkit-print-color-adjust: exact;
+      transform: none !important;
    }
 
-   .sidebar-wrapper {
-      position: static;
-      float: right;
-      width: 40%;
-      -webkit-print-color-adjust: exact;
+   .main-wrapper .company,
+   .main-wrapper .university {
+      color: $text-grey !important;
    }
 
-   .remove-container.container-block {
-      display: none;
+   .main-wrapper .details {
+      color: $text-color-secondary !important;
+
+      strong {
+         color: $text-color !important;
+      }
+
+      ul li::marker {
+         color: rgba($primary-color, 0.5) !important;
+      }
    }
 
-   footer {
-      display: none;
+   /* Projects */
+   .main-wrapper .project-title {
+      color: $primary-color !important;
+   }
+
+   /* ---- Skills ---- */
+   .skillset .level-bar {
+      background: $darker-grey !important;
+   }
+
+   .skillset .level-bar-inner {
+      background: $primary-color !important;
+   }
+
+   .skillset .level-title {
+      color: $text-color !important;
+   }
+
+   .skill-tag {
+      color: $text-color !important;
+      background: rgba($primary-color, 0.06) !important;
+      border: 1px solid rgba($primary-color, 0.15) !important;
+      box-shadow: none !important;
+
+      .fa,
+      .fas,
+      .fab {
+         color: $primary-color !important;
+      }
+   }
+
+   /* ---- Footer & Download — Hide ---- */
+   footer,
+   .footer {
+      display: none !important;
    }
 
    .download-bar {
       display: none !important;
    }
 
-   .skillset .level-bar-inner {
-      background-color: black !important;
-      -webkit-print-color-adjust: exact;
+   .remove-container.container-block {
+      display: none;
    }
 
+   /* ---- Links: show URL for external links ---- */
+   a[href^="http"]::after {
+      content: none !important;
+   }
+
+   /* ---- Headings ---- */
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      color: $text-color !important;
+      page-break-after: avoid;
+   }
 }
