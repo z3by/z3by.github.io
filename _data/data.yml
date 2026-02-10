@@ -56,8 +56,8 @@ experiences:
     company: Kraken Technologies
     details: |
       **Responsibilities:**
-      - Design and develop scalable backend services and APIs
-      - Build and maintain robust Python-based microservices architecture
+      - Design and develop scalable backend services and APIs using Python
+      - Build and maintain robust Python-based architecture
       - Collaborate with cross-functional teams to deliver high-quality software solutions
       - Implement best practices for code quality, testing, and deployment automation
   - role: Software Engineer
@@ -65,13 +65,13 @@ experiences:
     company: BriteCore
     details: |
       **Responsibilities:**
-      - Replaced existing system functionality with modern and flexible modular components
-      - Developed new features using Python, Django, Flask, and VueJS
-      - Worked with product owners to develop solutions that meet client needs
+      - Contributed to the modernization of legacy system architecture, replacing outdated functionality with flexible, modular components
+      - Developed new features using Python, Django, Flask, and VueJS, significantly improving system maintainability and extensibility
+      - Worked closely with product owners to translate complex requirements into robust technical solutions
       - Collaborated with engineering teams to deliver robust software solutions
   - role: Software Engineer
     time: 2018 - 2019
-    company: 359Jo solutions
+    company: 359Jo Solutions
     details: |
       Project-based employment developing a web solution for an NGO that connects investors with refugee ventures 
       around the world to create sustainable environments for refugees.

@@ -1,141 +1,180 @@
 /* ======= Base ======= */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: $text-color-secondary;
     background: $smoky-white;
-    font-size: 14px;
+    font-size: 15px; // Slightly larger for readability
     padding: 30px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6  {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
+    color: $text-color; // Ensure headers use primary text color
 }
 
 a {
-    color: darken($theme-color, 15%);
+    color: $primary-color;
+    transition: all 0.3s ease;
+
     &:hover {
-        text-decoration: underline;
-        color: darken($theme-color, 30%);
+        text-decoration: none;
+        color: lighten($primary-color, 15%);
     }
+
     &:focus {
         text-decoration: none;
     }
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .wrapper {
-    background:$theme-color;
+    background: $wrapper-bg;
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
-    @include box-shadow(0px 2px 4px rgba(0,0,0,0.1));
+    border-radius: 8px; // Soften corners
+    overflow: hidden; // Clip content to border radius
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); // Deeper shadow for dark mode
 }
 
 .sidebar-wrapper {
-    background: $theme-color;
+    background: $sidebar-bg;
     position: absolute;
     right: 0;
     width: 280px;
     height: 100%;
     min-height: 800px;
-    color: #fff;
+    color: $text-color;
+    border-left: 1px solid $divider; // Subtle separator
+
     a {
-        color: #fff;
+        color: $text-color;
+
+        &:hover {
+            color: $primary-color;
+        }
     }
+
     .profile-container {
         padding: 30px;
-        //background: darken($theme-color, 10%);
         background: rgba(0, 0, 0, 0.2);
         text-align: center;
-        color: #fff;
+        color: $text-color;
     }
+
     .name {
         font-size: 32px;
         font-weight: 900;
         margin-top: 0;
         margin-bottom: 10px;
     }
+
     .tagline {
-        color: rgba(256, 256, 256, 0.6);
+        color: $text-color-secondary;
         font-size: 16px;
         font-weight: 400;
         margin-top: 0;
         margin-bottom: 0;
     }
+
     .profile {
         margin-bottom: 15px;
     }
 
     .avatar {
-        //used for profile image
         max-width: 100px;
         margin-bottom: 15px;
-        border: 0px solid #fff;
+        border: 2px solid $primary-color; // Accent border
         border-radius: 100%;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
+
     .contact-list {
-        .fas, .fab {
+
+        .fas,
+        .fab {
             margin-right: 5px;
             font-size: 18px;
             vertical-align: middle;
+            color: $primary-color; // Accent icons
         }
+
         li {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
         }
     }
+
     .container-block {
         padding: 30px;
     }
+
     .container-block-title {
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 15px;
+        color: $text-color;
+        border-bottom: 1px solid $divider;
+        padding-bottom: 10px;
     }
+
     .degree {
         font-size: 14px;
         margin-top: 0;
         margin-bottom: 5px;
+        color: $text-color;
     }
+
     .education-container {
         .item {
             margin-bottom: 15px;
+
             &:last-child {
                 margin-bottom: 0;
             }
         }
+
         .meta {
-            color: rgba(256, 256, 256, 0.6);
+            color: $text-color-secondary;
             font-weight: 500;
             margin-bottom: 0px;
             margin-top: 0;
         }
+
         .time {
-            color: rgba(256, 256, 256, 0.6);
+            color: $text-grey;
             font-weight: 500;
             margin-bottom: 0px;
         }
     }
+
     .languages-container {
         .lang-desc {
-            color: rgba(256, 256, 256, 0.6);
+            color: $text-color-secondary;
         }
     }
 
     .languages-list {
         margin-bottom: 0;
+
         li {
             margin-bottom: 10px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -144,8 +183,10 @@ p {
 
     .interests-list {
         margin-bottom: 0;
+
         li {
             margin-bottom: 10px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -154,61 +195,94 @@ p {
 }
 
 .main-wrapper {
-    background: #fff;
+    background: $wrapper-bg;
     padding: 60px;
     padding-right: 340px;
+
     .section-title {
         text-transform: uppercase;
         font-size: 20px;
-        font-weight: 500;
-        color: darken($theme-color, 15%);
+        font-weight: 600;
+        color: $primary-color;
         position: relative;
         margin-top: 0;
-        margin-bottom: 20px;
-    }
-    .section {
-        margin-bottom: 60px;
+        margin-bottom: 25px;
+
+        .fa-stack {
+            font-size: 1rem; // Adjust icon size
+            margin-right: 8px;
+        }
+
+        .fa-circle {
+            color: rgba($primary-color, 0.2); // Soft background for icon
+        }
+
+        .fa-inverse {
+            color: $primary-color;
+        }
     }
 
-    .experiences-section, .educations-section {
+    .section {
+        margin-bottom: 60px;
+        border-bottom: 1px solid rgba($divider, 0.3); // Subtle separator between sections
+        padding-bottom: 40px;
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+
+    .experiences-section,
+    .educations-section {
         .item {
             margin-bottom: 30px;
         }
     }
+
     .upper-row {
         position: relative;
         overflow: hidden;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
-    .job-title, .degree {
+
+    .job-title,
+    .degree {
         color: $text-color;
-        font-size: 16px;
+        font-size: 18px;
         margin-top: 0;
         margin-bottom: 0;
-        font-weight: 500;
+        font-weight: 600;
     }
+
     .time {
         position: absolute;
         right: 0;
         top: 0;
-        color: $text-grey;
+        color: $primary-color;
+        font-weight: 500;
     }
-    .company, .university {
+
+    .company,
+    .university {
         margin-bottom: 10px;
-        color: $text-grey;
+        color: $text-color-secondary;
+        font-weight: 500;
     }
 
     .project-title {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
         margin-top: 0;
         margin-bottom: 5px;
-	color: darken($theme-color, 15%);
+        color: $primary-color;
     }
+
     .projects-section {
         .intro {
             margin-bottom: 30px;
         }
+
         .item {
             margin-bottom: 15px;
         }
@@ -220,15 +294,18 @@ p {
         color: $text-color;
         margin-bottom: 1px;
     }
+
     .publication-authors {
         font-style: italic;
         color: $text-grey;
         margin-bottom: 1px;
     }
+
     .publications-section {
         .intro {
             margin-bottom: 30px;
         }
+
         .item {
             margin-bottom: 15px;
         }
@@ -241,18 +318,24 @@ p {
         margin-bottom: 15px;
         overflow: hidden;
     }
+
     .level-title {
         font-size: 14px;
         margin-top: 0;
         margin-bottom: 12px;
+        color: $text-color;
     }
+
     .level-bar {
-        height: 12px;
-        background: $smoky-white;
+        height: 10px;
+        background: $darker-grey; // Dark track
+        border-radius: 5px;
     }
+
     .level-bar-inner {
-        height: 12px;
-        background: lighten($theme-color, 15%);
+        height: 10px;
+        background: $primary-color;
+        border-radius: 5px;
     }
 }
 
@@ -261,9 +344,10 @@ p {
 
 .footer {
     padding-top: 30px;
+
     .copyright {
         line-height: 1.6;
-        color: $text-color-secondary;
+        color: $text-grey;
         font-size: 13px;
     }
 
